@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding-top: 65px;
+}
+
+/* ! Nav Icons start */
+
+.NavIcons li {
+    font-size: larger;
+    font-weight: bold;
+}
+
+/* ! Nav Icons end */
+
+/* ! Footer Start */
+
+.footer {
+    /* margin-top: 1px; */
+    margin-bottom: 0;
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+}
+
+/* ! Footer end */
+
+/* ! Login & Signin Style start */
+
+.login {
+    margin: 2.5em;
+    padding: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    /* background-color: transparent; */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.9),
+        0 10px 50px 0 rgba(0, 0, 0, 0.9);
+    margin-bottom: 85px;
+}
+
+.signup {
+    margin-top: 150px;
+    margin: 2.5em;
+    padding: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    /* background-color: transparent; */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.9),
+        0 10px 50px 0 rgba(0, 0, 0, 0.9);
+}
+
+
+.formhead h3 {
+    /* Forgotten the password */
+
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#colRM {
+    color: black;
+}
+
+#FTP {
+    float: right;
+    color: red;
+    text-align-last: right;
+}
+
+#FTP:hover {
+    text-decoration: none;
+    transition: .5s ease-in-out;
+}
+
+#Log-In-Button {
+    width: 100%;
+}
+
+.acc {
+    font-size: large;
+    text-align: center;
+}
+
+.acc p {
+    color: black;
+}
+
+.acc a {
+    text-decoration: none;
+}
+
+/* ! Login & Signin Style end */
