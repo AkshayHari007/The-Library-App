@@ -17,7 +17,7 @@ body {
 .footer {
     /* margin-top: 1px; */
     margin-bottom: 0;
-    /* position: fixed; */
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -96,3 +96,22 @@ body {
 }
 
 /* ! Login & Signin Style end */
+
+/* ! Books Collection Start */
+
+.bookscol {
+    /* border: 5px sloid black; */
+    margin: 10px;
+    width: 99%;
+    padding: 25px;
+    background-color: cadetblue;
+}
+
+.bookscol h1 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+/* ! Books Collection Ends */

@@ -8,6 +8,8 @@ const app = new express();
 
 const signinRouter = require('./src/routes/signinRoutes');
 const loginRouter = require('./src/routes/loginRoutes');
+const booksRouter = require('./src/routes/booksRoutes');
+
 
 app.use(express.urlencoded({
     extended: true
@@ -21,6 +23,8 @@ app.set('views', './src/views');
 app.use(express.static('./public'));
 app.use('/signin', signinRouter);
 app.use('/login', loginRouter);
+app.use('/books', booksRouter);
+
 
 app.get('/', function (req, res) {
     res.render('index');

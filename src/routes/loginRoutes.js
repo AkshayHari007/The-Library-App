@@ -31,9 +31,10 @@ loginRouter.get('/check', function (req, res) {
 
         if (check) {
             // alert("LogIn Successful");
-            res.send("hi");
+            res.redirect('/books');
         } else {
-            // alert("Login Failed");
+            // console.log('false');
+            // alert("Login Failed. Please Try Again!");
             res.redirect('/login');
         }
 
