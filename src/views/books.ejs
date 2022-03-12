@@ -39,10 +39,10 @@
                         <a class="nav-link" href="/authors">Authors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/updatebook">Update Books</a>
+                        <a class="nav-link" href="/updatebooks">Update Books</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/updateauthor">Update Authors</a>
+                        <a class="nav-link" href="/updateauthors">Update Authors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Log Out</a>
@@ -68,17 +68,26 @@
         <h1>Books Collection</h1>
 
         <div class="row row-cols-1 row-cols-md-5 g-4">
+
+            <%for(i=0;i<books.length;i++){%>
             <div class="col">
                 <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="/images/<%=books[i].Image%>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title"><%=books[i].Book_Names%></h5>
+                        <p class="card-text"><%=books[i].Author_Name%></p>
+                        <!-- <p class="card-text"><%=books[i].genre%></p> -->
+                        <h4>
+                            <small style="font-family:courier,'new courier';" class="text-muted"><%=books[i].Genre%> ❁
+                                <a href="/books/<%=books[i]._id%>" class="text-muted">Read More</a></small>
+                        </h4>
                     </div>
                 </div>
             </div>
+            <%}%>
+
         </div>
+
 
     </div>
 

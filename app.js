@@ -9,6 +9,8 @@ const app = new express();
 const signinRouter = require('./src/routes/signinRoutes');
 const loginRouter = require('./src/routes/loginRoutes');
 const booksRouter = require('./src/routes/booksRoutes');
+const updatebooksRouter = require('./src/routes/updatebooksRoutes');
+
 
 
 app.use(express.urlencoded({
@@ -24,6 +26,8 @@ app.use(express.static('./public'));
 app.use('/signin', signinRouter);
 app.use('/login', loginRouter);
 app.use('/books', booksRouter);
+app.use('/updatebooks', updatebooksRouter);
+
 
 
 app.get('/', function (req, res) {
