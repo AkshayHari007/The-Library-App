@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Lists</title>
+    <title>Update Books</title>
 
     <link rel="icon" type="image/x-icon" href="images/logo 1.png">
 
@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #bec0c2;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/books">
                 <img src="images/logo 2.png" width=" 175" height="40" class="d-inline-block align-text-top">
             </a>
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
@@ -45,7 +45,7 @@
                         <a class="nav-link" href="/updateauthors">Update Authors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">Log Out</a>
+                        <a class="nav-link" href="/signin">Log Out</a>
                     </li>
                 </ul>
             </div>
@@ -62,56 +62,61 @@
 
 
     <!-- ! Books Data Start -->
+    <div class="bookscol  mx-auto" style="min-height: 83vh;">
+        <h1>Add Books</h1>
 
-    <div class="bookupdate mx-auto">
+        <div class="bookupdate mx-auto">
 
-        <form class="row g-3" action="/updatebooks/addbook" method="post">
+            <form class="row g-3" action="/updatebooks/addbook" method="post">
 
-            <!-- <div class="row g-3"> -->
-            <div class="col-md">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="book name"
-                        name="BookName">
-                    <label for="floatingInputGrid">Book Name</label>
+                <!-- <div class="row g-3"> -->
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="book name"
+                            name="BookName">
+                        <label for="floatingInputGrid">Book Name</label>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Author Name"
-                        name="AuthorName">
-                    <label for="floatingInputGrid">Author Name</label>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="Author Name"
+                            name="AuthorName">
+                        <label for="floatingInputGrid">Author Name</label>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Genre" name="Genre">
-                    <label for="floatingInputGrid">Genre</label>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="Genre" name="Genre">
+                        <label for="floatingInputGrid">Genre</label>
+                    </div>
                 </div>
-            </div>
 
-            <!-- </div> -->
-
-            <div class="form-floating">
-                <input type="text" class="form-control" placeholder="Description" id="floatingTextarea2"
-                    style="height: 100px" name="Description">
-                <!-- <textarea class="form-control" placeholder="Description" id="floatingTextarea2"
-                    style="height: 100px" name="Description"></textarea> -->
-                <label for="floatingTextarea2">Description</label>
-            </div>
+                <!-- </div> -->
 
 
-            <div class="mb-3">
-                <!-- <label for="formFile" class="form-label">Default file input example</label> -->
-                <input class="form-control" type="file" id="formFile" name="Image">
-            </div>
+                <div class="form-floating">
+                    <!-- <input type="text" class="form-control" placeholder="Description" id="floatingTextarea2"
+                    style="height: 100px" name="Description"> -->
+                    <textarea class="form-control" placeholder="Description" id="floatingTextarea2"
+                        style="height: 100px" name="Description"></textarea>
+                    <label for="floatingTextarea2">Description</label>
+                </div>
 
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Add Book</button>
-            </div>
-        </form>
+                <div class="mb-3">
+                    <!-- <label for="formFile" class="form-label">Default file input example</label> -->
+                    <input class="form-control" type="file" id="formFile" name="Image">
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+            </form>
+
+        </div>
 
     </div>
 
