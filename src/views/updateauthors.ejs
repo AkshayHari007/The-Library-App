@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Authors</title>
+
+    <link rel="icon" type="image/x-icon" href="images/logo 1.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="css/homestyle.css">
+</head>
+
+<body>
+
+    <!-- ! Navbar Start -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #bec0c2;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/books">
+                <img src="images/logo 2.png" width=" 175" height="40" class="d-inline-block align-text-top">
+            </a>
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav NavIcons">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/books">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/authors">Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/updatebooks">Update Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Update Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signin">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ! Navbar End -->
+
+    <!-- ! Carousel Start -->
+
+
+
+    <!-- ! Carousel Ends -->
+
+
+    <!-- ! Books Data Start -->
+    <div class="bookscol  mx-auto" style="min-height: 83vh;">
+        <h1>Add Authorrs</h1>
+
+        <div class="bookupdate mx-auto">
+
+            <form class="row g-3" action="/updateauthors/addauthor" method="post">
+
+                <!-- <div class="row g-3"> -->
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="book name"
+                            name="AuthorName">
+                        <label for="floatingInputGrid">Author Name</label>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="Author Name"
+                            name="Born">
+                        <label for="floatingInputGrid">Born</label>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="Genre"
+                            name="Nationality">
+                        <label for="floatingInputGrid">Nationality</label>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+
+
+                <div class="form-floating">
+                    <!-- <input type="text" class="form-control" placeholder="Description" id="floatingTextarea2"
+                    style="height: 100px" name="Description"> -->
+                    <textarea class="form-control" placeholder="Description" id="floatingTextarea2"
+                        style="height: 100px" name="About"></textarea>
+                    <label for="floatingTextarea2">About</label>
+                </div>
+
+
+                <div class="mb-3">
+                    <!-- <label for="formFile" class="form-label">Default file input example</label> -->
+                    <input class="form-control" type="file" id="formFile" name="Image">
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Add Author</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ! Books Data End -->
+
+
+
+
+
+    <!-- ! Footer Start -->
+
+    <div class="footer">
+        <h3>Copyright © Books.com 2022</h3>
+    </div>
+
+    <!-- ! Footer Start -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
