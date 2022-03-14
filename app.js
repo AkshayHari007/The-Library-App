@@ -40,4 +40,6 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 
-app.listen(5000);
+app.listen(5000, () => {
+    console.log("Server Ready on 5000");
+});
