@@ -19,7 +19,7 @@ booksRouter.get("/:id", function (req, res) {
     Bookdata.findOne({
         _id: id
     }).then(function (book) {
-        res.render("book", {
+        res.render("bookadmin", {
             book
         });
     });

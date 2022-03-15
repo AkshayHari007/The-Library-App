@@ -31,8 +31,40 @@ body {
 
 /* ! Login & Signin Style start */
 
-.login {
-    margin: 2.5em;
+.content {
+    margin-top: 4cm;
+    padding: 70px 0;
+    min-height: 66vh;
+}
+
+#buser {
+    /* margin-top: 4cm; */
+    padding: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    font: bold 25px 'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+    /* margin-left: 35%; */
+    margin: auto;
+    display: block;
+}
+
+#buser:hover {
+    background-color: lawngreen;
+    border: 2px solid lawngreen;
+    transition: 0.5s ease-in-out;
+    color: mintcream;
+}
+
+.ulogin {
+    margin-top: -4cm;
+    display: none;
+    /* margin: 2.5em; */
     padding: 50px;
     border: 2px solid rgba(0, 0, 0, 0.4);
     /* background-color: transparent; */
@@ -40,7 +72,81 @@ body {
     border-radius: 50px;
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.9),
         0 10px 50px 0 rgba(0, 0, 0, 0.9);
-    margin-bottom: 85px;
+    /* margin-bottom: 85px; */
+}
+
+.uclose {
+    font-weight: bold;
+    font-size: 25px;
+    float: right;
+    cursor: pointer;
+    /* position: absolute; */
+    top: 50%;
+    right: 0%;
+    /* padding: 12px 16px; */
+    transform: translate(0%, -50%);
+}
+
+.uclose:hover {
+    color: red;
+    transition: .2s ease-in-out;
+    /* background: rgba(187, 187, 187, 0.637); */
+}
+
+#badmin {
+
+    /* margin-top: 5px; */
+    padding: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    font: bold 25px 'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+    /* margin-left: 35%; */
+    margin: auto;
+    display: block;
+}
+
+#badmin:hover {
+    background-color: lawngreen;
+    border: 2px solid lawngreen;
+    transition: 0.5s ease-in-out;
+    color: mintcream;
+}
+
+.alogin {
+    display: none;
+    /* margin: 2.5em; */
+    padding: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    /* background-color: transparent; */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.9),
+        0 10px 50px 0 rgba(0, 0, 0, 0.9);
+    /* margin-bottom: 85px; */
+}
+
+.aclose {
+    font-weight: bold;
+    font-size: 25px;
+    float: right;
+    cursor: pointer;
+    /* position: absolute; */
+    top: 50%;
+    right: 0%;
+    /* padding: 12px 16px; */
+    transform: translate(0%, -50%);
+}
+
+.aclose:hover {
+    color: red;
+    transition: .2s ease-in-out;
+    /* background: rgba(187, 187, 187, 0.637); */
 }
 
 .signup {

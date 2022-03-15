@@ -51,28 +51,34 @@
 
     <!-- ! Login Form Start -->
 
-    <div class="login col-lg-4 formhead mx-auto">
+    <div class="content col-lg-4 mx-auto">
 
-        <h3>Log In to Books.com</h3>
-        <br>
+        <button id="buser">Login as a User</button>
 
-        <form action="/login/check" method="get" onsubmit="return validat();">
+        <div class="ulogin col-lg-12 formhead mx-auto">
 
-            <div class="form-floating mb-3 mt-3">
-                <input type="text" class="form-control" id="ebox" onkeyup="emailValidate()"
-                    placeholder="Enter Your Email Id" name="EmailId" required>
-                <label for="LName">Email Id</label>
-                <p id="emailMessage"></p>
-            </div>
+            <span class="uclose">&times;</span>
 
-            <div class="form-floating mb-3 mt-3">
-                <input type="password" class="form-control" id="pwdbox" onkeyup="pwdValidate()"
-                    placeholder="Enter a Password" name="Password" required>
-                <label for="LName">Password</label>
-                <p id="pwdMessage"></p>
-            </div>
+            <h3>Log In to Books.com</h3>
+            <br>
 
-            <!-- <div class="row mb-3">
+            <form action="/login/check" method="get" onsubmit="return validat();">
+
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="ebox" onkeyup="emailValidate()"
+                        placeholder="Enter Your Email Id" name="EmailId" required>
+                    <label for="LName">Email Id</label>
+                    <p id="emailMessage"></p>
+                </div>
+
+                <div class="form-floating mb-3 mt-3">
+                    <input type="password" class="form-control" id="pwdbox" onkeyup="pwdValidate()"
+                        placeholder="Enter a Password" name="Password" required>
+                    <label for="LName">Password</label>
+                    <p id="pwdMessage"></p>
+                </div>
+
+                <!-- <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="ebox" onkeyup="emailValidate()" required>
@@ -87,7 +93,79 @@
                 </div>
             </div> -->
 
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1" id="colRM">
+                                Remember Me
+                            </label>
+                            <a href="#" id="FTP">Forgotten the password?</a>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="Log-In-Button">Log in</button>
+                <br>
+                <br>
+                <hr>
+                <div class="acc">
+                    <p>Don't have an account? <a href="/signin">Sign up!</a></p>
+
+                </div>
+
+            </form>
+        </div>
+        <br>
+        <button id="badmin">Login as Admin</button>
+
+
+        <div class="alogin col-lg-12 formhead mx-auto">
+
+            <span class="aclose">&times;</span>
+
+            <h3>Log In as Admin</h3>
+            <br>
+
+            <form action="/login/acheck" method="get" onsubmit="return avalidate();">
+
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="aebox" onkeyup="aemailValidate()"
+                        placeholder="Enter Your Email Id" name="EmailId" required>
+                    <label for="LName">Email Id</label>
+                    <p id="aemailMessage"></p>
+                </div>
+
+                <div class="form-floating mb-3 mt-3">
+                    <input type="password" class="form-control" id="aidbox" onkeyup="aidValidate()"
+                        placeholder="Enter the Admin Id Number" name="AdminId" required>
+                    <label for="LName">Admin Id Number</label>
+                    <p id="aidMessage"></p>
+                </div>
+
+                <div class="form-floating mb-3 mt-3">
+                    <input type="password" class="form-control" id="apwdbox" onkeyup="apwdValidate()"
+                        placeholder="Enter a Password" name="Password" required>
+                    <label for="LName">Password</label>
+                    <p id="apwdMessage"></p>
+                </div>
+                <br>
+
+                <!-- <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="ebox" onkeyup="emailValidate()" required>
+                    <p id="emailMessage"></p>
+                </div>
+            </div>
             <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwdbox" onkeyup="pwdValidate()" required>
+                    <p id="pwdMessage"></p>
+                </div>
+            </div> -->
+
+                <!-- <div class="row mb-3">
                 <div class="col-sm-12">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck1">
@@ -97,17 +175,18 @@
                         <a href="#" id="FTP">Forgotten the password?</a>
                     </div>
                 </div>
-            </div>
-            <button type="submit" class="btn btn-primary" id="Log-In-Button">Log in</button>
-            <br>
+            </div> -->
+                <button type="submit" class="btn btn-primary" id="Log-In-Button">Log in</button>
+                <!-- <br>
             <br>
             <hr>
             <div class="acc">
                 <p>Don't have an account? <a href="/signin">Sign up!</a></p>
 
-            </div>
+            </div> -->
 
-        </form>
+            </form>
+        </div>
     </div>
 
     <!-- ! Login Form Ends -->
@@ -122,7 +201,7 @@
 
     <!-- ! Footer Start -->
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/loginJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
