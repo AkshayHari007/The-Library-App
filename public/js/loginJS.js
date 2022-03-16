@@ -99,7 +99,7 @@ function validat() {
 // ! Admin Verification
 
 var ae = document.getElementById("aebox");
-var aid = document.getElementById("aiddbox");
+var aid = document.getElementById("aidbox");
 var apwd = document.getElementById("apwdbox");
 var aem = document.getElementById("aemailMessage");
 var aidm = document.getElementById("aidMessage");
@@ -138,7 +138,7 @@ function aidValidate() {
         //     pwd.style.border = "3px solid green";
         // }
     } else {
-        aidm.innerHTML = "Admin Id Format Invali";
+        aidm.innerHTML = "Admin Id Format Invalid";
         aidm.style.fontSize = "14px";
         aidm.style.color = "red";
         aid.style.border = "3px solid red";

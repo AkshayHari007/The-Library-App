@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #bec0c2;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/books">
+            <a class="navbar-brand" href="/booksadmin">
                 <img src="/images/logo 2.png" width=" 175" height="40" class="d-inline-block align-text-top">
             </a>
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
@@ -33,10 +33,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav NavIcons">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/books">Books</a>
+                        <a class="nav-link active" aria-current="page" href="/booksadmin">Books</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/authors">Authors</a>
+                        <a class="nav-link" href="/authorsadmin">Authors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/updatebooks">Update Books</a>
@@ -51,13 +51,13 @@
 
             </div>
         </div>
-        <form action="/books/edit" method="POST">
+        <form action="/booksadmin/edit" method="POST">
             <input type="hidden" name="id" value="<%=book._id%>">
             <button id="editbtn" type="submit" class="btn btn-success btn-sm" style="float: right;">Edit
                 Book</button>
         </form>
 
-        <form action="/books/delete" method="POST">
+        <form action="/booksadmin/delete" method="POST">
             <input type="hidden" name="id" value="<%=book._id%>">
             <button id="dltbtn" type="submit" class="btn btn-danger btn-sm"
                 style="float: right; margin-right: 25px">Delete Book</button>

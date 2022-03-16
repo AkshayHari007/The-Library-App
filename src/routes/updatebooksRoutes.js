@@ -33,7 +33,7 @@ updatebooksRouter.post('/addbook', upload.single("Image"), function (req, res) {
     };
     var book = Bookdata(details);
     book.save();
-    res.redirect("/books");
+    res.redirect("/booksadmin");
 });
 
 module.exports = updatebooksRouter;

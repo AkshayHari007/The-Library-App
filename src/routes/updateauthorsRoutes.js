@@ -30,7 +30,7 @@ updateauthorsRouter.post('/addauthor', upload.single("Image"), function (req, re
     };
     var author = Authordata(details);
     author.save();
-    res.redirect("/authors");
+    res.redirect("/authorsadmin");
 });
 
 module.exports = updateauthorsRouter;

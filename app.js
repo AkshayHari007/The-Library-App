@@ -10,7 +10,9 @@ const app = new express();
 const signinRouter = require('./src/routes/signinRoutes');
 const loginRouter = require('./src/routes/loginRoutes');
 const booksRouter = require('./src/routes/booksRoutes');
+const adminbooksRouter = require('./src/routes/adminbooksRoutes');
 const authorsRouter = require('./src/routes/authorsRoutes');
+const adminauthorsRouter = require('./src/routes/adminauthorsRoutes');
 const updatebooksRouter = require('./src/routes/updatebooksRoutes');
 const updateauthorsRouter = require('./src/routes/updateauthorsRoutes');
 
@@ -30,7 +32,9 @@ app.use(express.static('./public'));
 app.use('/signin', signinRouter);
 app.use('/login', loginRouter);
 app.use('/books', booksRouter);
+app.use('/booksadmin', adminbooksRouter);
 app.use('/authors', authorsRouter);
+app.use('/authorsadmin', adminauthorsRouter);
 app.use('/updatebooks', updatebooksRouter);
 app.use('/updateauthors', updateauthorsRouter);
 
