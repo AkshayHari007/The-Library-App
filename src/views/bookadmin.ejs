@@ -51,17 +51,17 @@
 
             </div>
         </div>
-        <form action="/booksadmin/edit" method="POST">
-            <input type="hidden" name="id" value="<%=book._id%>">
-            <button id="editbtn" type="submit" class="btn btn-success btn-sm" style="float: right;">Edit
-                Book</button>
-        </form>
 
-        <form action="/booksadmin/delete" method="POST">
-            <input type="hidden" name="id" value="<%=book._id%>">
-            <button id="dltbtn" type="submit" class="btn btn-danger btn-sm"
-                style="float: right; margin-right: 25px">Delete Book</button>
-        </form>
+        <!-- <form action="/booksadmin/edit" method="POST"> -->
+        <!-- <input type="hidden" name="id" value="<%=book._id%>"> -->
+        <button id="editbtn" type="submit" style="float: right;">Edit Book</button>
+        <!-- </form> -->
+
+        <!-- <form action="/booksadmin/<%=book._id%>" method="POST"> -->
+        <!-- "?_method=DELETE"-->
+        <!-- <input type="hidden" name="id" value="<%=book._id%>"> -->
+        <button id="dltbtn" type="submit" style="float: right;">Delete Book</button>
+        <!-- </form> -->
     </nav>
 
     <!-- ! Navbar End -->
@@ -73,10 +73,109 @@
     <!-- ! Carousel Ends -->
 
 
+
     <!-- ! Books Data Start -->
 
 
     <div class="bookscol  mx-auto" style="min-height: 100vh;">
+
+        <!-- ! Delete tab Starts -->
+
+        <div class="del">
+
+            <span class="uclosed" style="margin-right: 25px; margin-top: 25px;">&times;</span>
+
+            <h1>Are you sure you want to delete "<%=book.Book_Name%>" ?</h1>
+
+            <div class=" col-3 d-grid gap-4 d-md-flex mx-auto">
+
+                <form action="/booksadmin/<%=book._id%>" method="POST">
+                    <!-- "?_method=DELETE"-->
+                    <!-- <input type="hidden" name="id" value="<%=book._id%>"> -->
+                    <!-- <button id="dltbtn" type="submit">Yes</button> -->
+                    <button id="yes" type="submit" class="btn btn btn-danger btn-lg"
+                        style="min-width: 150px;"><b>Yes</b></button>
+                </form>
+
+                <button id="no" class="btn btn-success" style="min-width: 150px;"><b>No</b></button>
+                <br>
+            </div>
+
+
+        </div>
+
+        <!-- ! Delete tab Ends -->
+
+
+        <!-- ! Book Update Starts -->
+        <div class="update">
+
+            <span class="uclose" style="margin-right: 25px; margin-top: 25px;">&times;</span>
+
+            <h1>Update <%=book.Book_Name%> </h1>
+
+            <div class="bookupdate mx-auto">
+
+                <form class="row g-3" action="/booksadmin/update/<%=book._id%>" method="post"
+                    enctype="multipart/form-data">
+
+                    <!-- <div class="row g-3"> -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="book name"
+                                name="BookName" required value="<%=book.Book_Name%>">
+                            <label for="floatingInputGrid">Book Name</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="Author Name"
+                                name="AuthorName" required value="<%=book.Author_Name%>">
+                            <label for="floatingInputGrid">Author Name</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="Genre"
+                                name="Genre" required value="<%=book.Genre%>">
+                            <label for="floatingInputGrid">Genre</label>
+                        </div>
+                    </div>
+
+                    <!-- </div> -->
+
+
+                    <div class="form-floating">
+                        <!-- <input type="text" class="form-control" placeholder="Description" id="floatingTextarea2"
+                    style="height: 100px" name="Description"> -->
+                        <textarea class="form-control" placeholder="Description" id="floatingTextarea2"
+                            style="height: 100px" name="Description" required><%=book.Description%></textarea>
+                        <label for="floatingTextarea2">Description</label>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <!-- <label for="formFile" class="form-label">Default file input example</label> -->
+                        <input class="form-control" type="file" id="formFile" name="Image" required
+                            value="/images/<%=book.Image%>">
+                    </div>
+
+
+                    <div class=" col-12">
+                        <button type="submit" class="btn btn-primary" value="<%=book._id%>">Update the
+                            Book</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- ! Book Update Ends -->
+
+
         <h1><%=book.Book_Name%></h1>
 
         <div class="text-center" style="float:right;">
@@ -132,7 +231,8 @@
     <!-- ! Footer Start -->
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/updateJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>

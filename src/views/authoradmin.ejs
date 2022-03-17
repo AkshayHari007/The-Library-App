@@ -50,6 +50,10 @@
                 </ul>
             </div>
         </div>
+
+        <button id="editbtn" type="submit" style="float: right;width: 185px;">Edit Author</button>
+        <button id="dltbtn" type="submit" style="float: right; width: 185px;">Delete Author</button>
+
     </nav>
 
     <!-- ! Navbar End -->
@@ -65,6 +69,105 @@
 
 
     <div class="bookscol  mx-auto" style="min-height: 100vh;">
+
+
+        <!-- ! Delete tab Starts -->
+
+        <div class="del">
+
+            <span class="uclosed" style="margin-right: 25px; margin-top: 25px;">&times;</span>
+
+            <h1>Are you sure you want to delete "<%=author.Author_Name%>" ?</h1>
+
+            <div class=" col-3 d-grid gap-4 d-md-flex mx-auto">
+
+                <form action="/authorsadmin/<%=author._id%>" method="POST">
+
+                    <button id="yes" type="submit" class="btn btn btn-danger btn-lg"
+                        style="min-width: 150px;"><b>Yes</b></button>
+                </form>
+
+                <button id="no" class="btn btn-success" style="min-width: 150px;"><b>No</b></button>
+                <br>
+            </div>
+
+
+        </div>
+
+        <!-- ! Delete tab Ends -->
+
+
+        <!-- ! Author Update Starts -->
+        <div class="update">
+
+            <span class="uclose" style="margin-right: 25px; margin-top: 25px;">&times;</span>
+
+            <h1>Update <%=author.Author_Name%> </h1>
+
+            <div class="bookupdate mx-auto">
+
+                <form class="row g-3" action="/authorsadmin/update/<%=author._id%>" method="post"
+                    enctype="multipart/form-data">
+
+                    <!-- <div class="row g-3"> -->
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="author name"
+                                name="AuthorName" required value="<%=author.Author_Name%>">
+                            <label for="floatingInputGrid">Author Name</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="Born"
+                                name="Born" required value="<%=author.Born%>">
+                            <label for="floatingInputGrid">Born</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="Nationality"
+                                name="Nationality" required value="<%=author.Nationality%>">
+                            <label for="floatingInputGrid">Nationality</label>
+                        </div>
+                    </div>
+
+                    <!-- </div> -->
+
+
+                    <div class="form-floating">
+                        <!-- <input type="text" class="form-control" placeholder="Description" id="floatingTextarea2"
+                    style="height: 100px" name="Description"> -->
+                        <textarea class="form-control" placeholder="Description" id="floatingTextarea2"
+                            style="height: 100px" name="About" required><%=author.About%></textarea>
+                        <label for="floatingTextarea2">About</label>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <!-- <label for="formFile" class="form-label">Default file input example</label> -->
+                        <input class="form-control" type="file" id="formFile" name="Image" required
+                            value="/images/<%=author.Image%>">
+                    </div>
+
+
+                    <div class=" col-12">
+                        <button type="submit" class="btn btn-primary" value="<%=author._id%>">Update the
+                            Author</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- ! Author Update Ends -->
+
+
+
+
         <h1><%=author.Author_Name%></h1>
 
         <div class="text-center" style="float:right;">
@@ -78,13 +181,13 @@
             <dt class="col-sm-2">Author Name </dt>
             <dd class="col-sm-10"><b>: </b><%=author.Author_Name%></dd>
 
-            <dt class="col-sm-2">Author Name</dt>
+            <dt class="col-sm-2">Born</dt>
             <dd class="col-sm-10"><b>: </b><%=author.Born%></dd>
 
-            <dt class="col-sm-2">Genre</dt>
+            <dt class="col-sm-2">Nationality</dt>
             <dd class="col-sm-10"><b>: </b><%=author.Nationality%></dd>
 
-            <dt class="col-sm-2">Book Description</dt>
+            <dt class="col-sm-2">About</dt>
             <dd class="col-sm-10" style="text-align: justify;"><b>: </b><%=author.About%></dd>
 
             <!-- <dt class="col-sm-3">Term</dt>
@@ -119,7 +222,8 @@
     <!-- ! Footer Start -->
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/updateJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
