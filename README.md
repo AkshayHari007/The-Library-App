@@ -1,5 +1,5 @@
 # The-Library-App
-Case Study II
+Case Study 
 
 Heroku Link: https://library-app-website.herokuapp.com/
 
